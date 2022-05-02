@@ -17,14 +17,14 @@ class Contenedor {
                 const _products = JSON.parse(contenido);
                 producto.id = _products.length + 1;
                 _products.push(producto);
-                fs.writeFileSync( `./${this.fileName}`, JSON.stringify(_products));
+                fs.writeFileSync( `./${this.fileName}`, JSON.stringify(_products, null, 2));
                 return producto.id;
             } 
             else {
                 const _products = [];
                 producto.id = 1;
                 _products.push(producto);
-                fs.writeFileSync( `./${this.fileName}`, JSON.stringify(_products));
+                fs.writeFileSync( `./${this.fileName}`, JSON.stringify(_products, null, 2));
                 return producto.id;
             }
         } catch (error) {
@@ -66,7 +66,7 @@ class Contenedor {
             }
             else {
                 _products.splice(index, 1);
-                fs.writeFileSync( `./${this.fileName}`, JSON.stringify(_products));
+                fs.writeFileSync( `./${this.fileName}`, JSON.stringify(_products, null, 2));
             }
         } catch (error) {
             console.log("Error deleteById: ", error);
