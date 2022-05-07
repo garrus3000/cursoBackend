@@ -1,0 +1,24 @@
+{
+  "name": "desafio-4-y-git",
+  "version": "1.0.0",
+  "description": "",
+  "main": "desafio4.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garrus3000/cursoBackend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garrus3000/cursoBackend/issues"
+  },
+  "homepage": "https://github.com/garrus3000/cursoBackend#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

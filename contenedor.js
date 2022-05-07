@@ -81,22 +81,4 @@ class Contenedor {
     }
 }
 
-const contenedor = new Contenedor("productos.txt");
-
-(async function () {
-    await contenedor.save("Pizza", 1200, "https://progsoft.net/images/lorem-pizza-8e6f0d64f7f428b88a6bb1453d7aed4f7cffd3d9.jpg");
-    await contenedor.save("Hamburguesa", 1000, "https://media.istockphoto.com/photos/juicy-hamburger-on-white-background-picture-id1206323282");
-    console.log("Return id del metodo save(), id:", await contenedor.save("Gaseosa", 600, "https://pbs.twimg.com/media/Dr1W4DgWsAAsfCz.jpg"));
-    try {
-        console.log("Lista completa de productos: ", await contenedor.getAll());
-        const producto = await contenedor.getById(1);
-        console.log(`Producto filtrado por "id: ${producto.id}" `, producto);
-        await contenedor.deleteById(2);
-        console.log("Lista completa de productos: ", await contenedor.getAll());
-        console.log(await contenedor.getById(2));
-        await contenedor.deleteAll();
-        console.log("Lista completa de productos: ", await contenedor.getAll());
-    } catch (error) {
-        console.log(error);
-    }
-})();
+module.exports = Contenedor;
